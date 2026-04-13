@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terraria Adventures • Explore, Construa, Sobreviva!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#1a140f] text-[#d4c3a3]">
+
+    <!-- NAVBAR estilo Terraria -->
+    <nav class="bg-[#2c2118] border-b-4 border-[#8b5a2b] sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-4">
+                <div class="w-12 h-12 bg-[#e07a2f] border-4 border-[#f4d03f] flex items-center justify-center text-3xl shadow-inner">
+                    🪓
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold tracking-wider text-[#f4d03f]">TERRARIA</h1>
+                    <p class="text-[#8b5a2b] text-xs -mt-1">ADVENTURES</p>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-x-8 text-lg font-medium">
+                <a href="#inicio" class="nav-link">INÍCIO</a>
+                <a href="#mundo" class="nav-link">CRIE SEU MUNDO</a>
+                <a href="#classes" class="nav-link">CLASSES</a>
+                <a href="#bosses" class="nav-link">BOSSES</a>
+                <a href="#comunidade" class="nav-link">COMUNIDADE</a>
+            </div>
+
+            <button onclick="toggleMobileMenu()" 
+                    class="md:hidden w-12 h-12 bg-[#8b5a2b] border-2 border-[#f4d03f] flex items-center justify-center text-2xl">
+                <i id="menu-icon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#2c2118] border-t-4 border-[#8b5a2b] px-6 py-6">
+            <div class="flex flex-col gap-y-5 text-lg">
+                <a href="#inicio" onclick="toggleMobileMenu()" class="py-2">INÍCIO</a>
+                <a href="#mundo" onclick="toggleMobileMenu()" class="py-2">CRIE SEU MUNDO</a>
+                <a href="#classes" onclick="toggleMobileMenu()" class="py-2">CLASSES</a>
+                <a href="#bosses" onclick="toggleMobileMenu()" class="py-2">BOSSES</a>
+                <a href="#comunidade" onclick="toggleMobileMenu()" class="py-2">COMUNIDADE</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO - Estilo Terraria -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-block bg-[#2c2118] border-4 border-[#f4d03f] px-8 py-3 mb-8">
+                <span class="text-[#e07a2f] font-bold text-xl tracking-widest">VERSÃO 1.4.4 • JOURNEY'S END</span>
+            </div>
+
+            <h1 class="text-6xl md:text-7xl font-bold text-[#f4d03f] leading-none mb-6 tracking-wider">
+                EXPLORE.<br>CONSTRUA.<br>SOBREVIVA.
+            </h1>
+
+            <p class="text-2xl text-[#d4c3a3] max-w-2xl mx-auto mb-12">
+                O maior sandbox de aventura 2D do mundo está esperando por você!
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#mundo" 
+                   class="px-12 py-6 bg-[#e07a2f] hover:bg-[#f4d03f] text-[#2c2118] font-bold text-2xl border-4 border-[#2c2118] transition-all active:scale-95">
+                    COMEÇAR AVENTURA
+                </a>
+                <a href="#bosses" 
+                   class="px-12 py-6 bg-transparent border-4 border-[#f4d03f] hover:bg-[#f4d03f] hover:text-[#2c2118] font-bold text-2xl transition-all">
+                    ENFRENTAR BOSSES
+                </a>
+            </div>
+
+            <div class="mt-20 text-[#8b5a2b] text-sm flex justify-center gap-8">
+                <div>❤️ 500 HP</div>
+                <div>🔷 200 MANA</div>
+                <div>🛠️ +3000 ITENS</div>
+            </div>
+        </div>
+
+        <!-- Efeito de terra/pixels no fundo -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1a140f] to-transparent"></div>
+    </section>
+
+    <!-- SEÇÃO CRIE SEU MUNDO -->
+    <section id="mundo" class="py-24 bg-[#2c2118]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-[#f4d03f] mb-16">ESCOLHA SEU MUNDO</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="block-bg p-8 border-4 border-[#8b5a2b]">
+                    <div class="text-6xl mb-6">🌳</div>
+                    <h3 class="text-3xl font-bold mb-3 text-[#f4d03f]">Floresta Clássica</h3>
+                    <p class="text-[#d4c3a3]">O mundo padrão. Perfeito para iniciantes. Cheio de Slimes e tesouros.</p>
+                </div>
+                <div class="block-bg p-8 border-4 border-[#8b5a2b]">
+                    <div class="text-6xl mb-6">❄️</div>
+                    <h3 class="text-3xl font-bold mb-3 text-[#f4d03f]">Neve Eterna</h3>
+                    <p class="text-[#d4c3a3]">Bioma gelado com Yetis, iglus e o poderoso Ice Queen.</p>
+                </div>
+                <div class="block-bg p-8 border-4 border-[#8b5a2b]">
+                    <div class="text-6xl mb-6">🌋</div>
+                    <h3 class="text-3xl font-bold mb-3 text-[#f4d03f]">Corrupção / Carmim</h3>
+                    <p class="text-[#d4c3a3]">Mundos malignos cheios de desafios e loot poderoso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASSES / PERSONAGENS -->
+    <section id="classes" class="py-24 bg-[#1a140f]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold text-[#f4d03f] mb-16">ESCOLHA SUA CLASSE</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="block-bg p-6">🗡️ Guerreiro</div>
+                <div class="block-bg p-6">🏹 Arqueiro</div>
+                <div class="block-bg p-6">🔮 Mago</div>
+                <div class="block-bg p-6">🛡️ Tank / Summoner</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOSSES -->
+    <section id="bosses" class="py-24 bg-[#2c2118]">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-[#f4d03f] mb-16">DERROTE OS GRANDES BOSSES</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="text-8xl mb-4">👑</div>
+                    <h3 class="text-2xl font-bold text-[#e07a2f]">Rei Slime</h3>
+                </div>
+                <div class="text-center">
+                    <div class="text-8xl mb-4">🐉</div>
+                    <h3 class="text-2xl font-bold text-[#e07a2f]">Wall of Flesh</h3>
+                </div>
+                <div class="text-center">
+                    <div class="text-8xl mb-4">🌌</div>
+                    <h3 class="text-2xl font-bold text-[#e07a2f]">Moon Lord</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t-4 border-[#8b5a2b]">
+        <div class="max-w-7xl mx-auto px-6 text-center text-[#8b5a2b]">
+            <p class="text-xl mb-4">Made with ❤️ for the Terraria Community</p>
+            <p class="text-sm">Este é um projeto fictício inspirado em Terraria para demonstração</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu')
+            const icon = document.getElementById('menu-icon')
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden')
+                icon.classList.replace('fa-bars', 'fa-xmark')
+            } else {
+                menu.classList.add('hidden')
+                icon.classList.replace('fa-xmark', 'fa-bars')
+            }
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault()
+                const target = document.querySelector(this.getAttribute('href'))
+                if (target) target.scrollIntoView({ behavior: 'smooth' })
+            })
+        })
+    </script>
+</body>
+</html>
